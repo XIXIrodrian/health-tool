@@ -28,13 +28,25 @@
   <!-- 扫描动画遮罩 -->
   <view class="scanning-overlay" wx:if="{{scanning}}">
     <view class="scanning-content">
+      <!-- 卡通扫描图标 -->
+      <view class="cartoon-icon">
+        <text class="icon-emoji">🧘</text>
+        <view class="scan-ripple"></view>
+        <view class="scan-ripple ripple-delay"></view>
+      </view>
+
       <view class="scan-box">
         <view class="scan-line"></view>
         <view class="corner corner-tl"></view>
         <view class="corner corner-tr"></view>
         <view class="corner corner-bl"></view>
         <view class="corner corner-br"></view>
+        <!-- 装饰星星 -->
+        <view class="star star-1">✨</view>
+        <view class="star star-2">✨</view>
+        <view class="star star-3">💫</view>
       </view>
+
       <view class="scanning-text">
         <text class="scan-title">AI分析中</text>
         <view class="loading-dots">
@@ -43,6 +55,16 @@
           <text class="dot">●</text>
         </view>
       </view>
+
+      <!-- 进度条 -->
+      <view class="progress-container">
+        <view class="progress-bar">
+          <view class="progress-fill" style="width: {{progress}}%"></view>
+          <view class="progress-glow" style="left: {{progress}}%"></view>
+        </view>
+        <text class="progress-text">{{progress}}%</text>
+      </view>
+
       <text class="scan-tip">正在分析坐姿健康状况</text>
     </view>
   </view>

@@ -3,7 +3,8 @@ Page({
   data: {
     hasResult: false,
     imagePath: '',
-    scanning: false
+    scanning: false,
+    progress: 0
   },
 
   onLoad(options) {
@@ -68,20 +69,44 @@ Page({
   analyzeImage(imagePath) {
     // 显示扫描动画
     this.setData({
-      scanning: true
+      scanning: true,
+      progress: 0
     });
+
+    // 模拟进度条动画
+    this.progressTimer = setInterval(() => {
+      let currentProgress = this.data.progress;
+      if (currentProgress < 95) {
+        // 随机增加进度，让动画更自然
+        const increment = Math.floor(Math.random() * 10) + 5;
+        currentProgress = Math.min(currentProgress + increment, 95);
+        this.setData({
+          progress: currentProgress
+        });
+      }
+    }, 200);
 
     // TODO: 调用AI识别接口
     setTimeout(() => {
-      // 隐藏扫描动画
+      // 清除进度定时器
+      if (this.progressTimer) {
+        clearInterval(this.progressTimer);
+      }
+      // 完成进度
       this.setData({
-        scanning: false,
-        hasResult: true
+        progress: 100
       });
-      wx.showToast({
-        title: '识别完成',
-        icon: 'success'
-      });
+      // 短暂延迟后隐藏扫描动画
+      setTimeout(() => {
+        this.setData({
+          scanning: false,
+          hasResult: true
+        });
+        wx.showToast({
+          title: '识别完成',
+          icon: 'success'
+        });
+      }, 500);
     }, 3000);
   }
 });

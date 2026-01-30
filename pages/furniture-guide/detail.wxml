@@ -1,0 +1,135 @@
+<!--pages/furniture-guide/detail.wxml-->
+<view class="container">
+  <!-- 家具信息头部 -->
+  <view class="furniture-header">
+    <image class="header-bg" src="{{furniture.image}}" mode="aspectFill"></image>
+    <view class="header-overlay"></view>
+    <view class="header-content">
+      <text class="furniture-name">{{furniture.name}}</text>
+      <text class="furniture-desc">{{furniture.description}}</text>
+      <view class="category-tag">{{furniture.categoryName}}</view>
+    </view>
+  </view>
+
+  <!-- 材质分析说明 -->
+  <view class="intro-section">
+    <view class="intro-icon">💡</view>
+    <text class="intro-title">材质分析说明</text>
+    <text class="intro-desc">为您详细分析各类材质的性能特点、优势劣势以及潜在的健康安全风险，帮助您做出明智的选择。</text>
+  </view>
+
+  <!-- 优选材质推荐 -->
+  <view class="material-section">
+    <view class="section-header good-header">
+      <view class="header-left">
+        <text class="section-icon">✓</text>
+        <text class="section-title">优选材质推荐</text>
+      </view>
+      <text class="material-count">{{goodMaterials.length}}种</text>
+    </view>
+
+    <view class="material-list">
+      <view class="material-card good-card" wx:for="{{goodMaterials}}" wx:key="name">
+        <!-- 材质名称和性能 -->
+        <view class="material-header">
+          <view class="material-icon good-icon">✓</view>
+          <view class="material-info">
+            <text class="material-name">{{item.name}}</text>
+            <text class="material-performance">{{item.performance}}</text>
+          </view>
+        </view>
+
+        <!-- 优势 -->
+        <view class="detail-section">
+          <text class="detail-label">✨ 主要优势</text>
+          <view class="advantage-list">
+            <text class="advantage-item" wx:for="{{item.advantages}}" wx:for-item="advantage" wx:key="*this">
+              • {{advantage}}
+            </text>
+          </view>
+        </view>
+
+        <!-- 劣势 -->
+        <view class="detail-section">
+          <text class="detail-label">⚠️ 注意事项</text>
+          <view class="disadvantage-list">
+            <text class="disadvantage-item" wx:for="{{item.disadvantages}}" wx:for-item="disadvantage" wx:key="*this">
+              • {{disadvantage}}
+            </text>
+          </view>
+        </view>
+
+        <!-- 安全风险 -->
+        <view class="detail-section safety-section">
+          <text class="detail-label">🛡️ 安全提示</text>
+          <view class="safety-list">
+            <text class="safety-item" wx:for="{{item.safetyRisks}}" wx:for-item="risk" wx:key="*this">
+              • {{risk}}
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 需要避雷的材质 -->
+  <view class="material-section">
+    <view class="section-header bad-header">
+      <view class="header-left">
+        <text class="section-icon">✗</text>
+        <text class="section-title">需要避雷的材质</text>
+      </view>
+      <text class="material-count">{{badMaterials.length}}种</text>
+    </view>
+
+    <view class="material-list">
+      <view class="material-card bad-card" wx:for="{{badMaterials}}" wx:key="name">
+        <!-- 材质名称和性能 -->
+        <view class="material-header">
+          <view class="material-icon bad-icon">✗</view>
+          <view class="material-info">
+            <text class="material-name">{{item.name}}</text>
+            <text class="material-performance">{{item.performance}}</text>
+          </view>
+        </view>
+
+        <!-- 优势（如果有） -->
+        <view class="detail-section" wx:if="{{item.advantages.length > 0}}">
+          <text class="detail-label">仅有的优势</text>
+          <view class="advantage-list">
+            <text class="advantage-item" wx:for="{{item.advantages}}" wx:for-item="advantage" wx:key="*this">
+              • {{advantage}}
+            </text>
+          </view>
+        </view>
+
+        <!-- 劣势 -->
+        <view class="detail-section">
+          <text class="detail-label">❌ 主要劣势</text>
+          <view class="disadvantage-list">
+            <text class="disadvantage-item" wx:for="{{item.disadvantages}}" wx:for-item="disadvantage" wx:key="*this">
+              • {{disadvantage}}
+            </text>
+          </view>
+        </view>
+
+        <!-- 安全风险（重点标注） -->
+        <view class="detail-section danger-section">
+          <text class="detail-label">⚠️ 健康安全风险</text>
+          <view class="danger-list">
+            <text class="danger-item" wx:for="{{item.safetyRisks}}" wx:for-item="risk" wx:key="*this">
+              • {{risk}}
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部建议 -->
+  <view class="suggestion-section">
+    <view class="suggestion-icon">���</view>
+    <text class="suggestion-title">选购建议</text>
+    <text class="suggestion-text">选购{{furniture.name}}时，建议优先考虑上述推荐的优质材质。如预算有限，务必要求商家提供产品检测报告，确保甲醛、重金属等有害物质含量符合国家标准。建议选择有CCC认证、环保认证的正规品牌产品。</text>
+  </view>
+</view>

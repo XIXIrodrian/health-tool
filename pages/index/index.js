@@ -54,6 +54,22 @@ Page({
   },
 
   /**
+   * 跳转到家具避雷指南页面
+   */
+  goToFurnitureGuide() {
+    wx.navigateTo({
+      url: '/pages/furniture-guide/guide',
+      fail: (err) => {
+        console.error('跳转失败:', err);
+        wx.showToast({
+          title: '页面跳转失败',
+          icon: 'none'
+        });
+      }
+    });
+  },
+
+  /**
    * 显示使用说明
    */
   showUserGuide() {

@@ -3,6 +3,8 @@
     "pages/index/index",
     "pages/furniture-detect/detect",
     "pages/posture-analyze/analyze",
+    "pages/furniture-guide/guide",
+    "pages/furniture-guide/detail",
     "pages/share-card/share"
   ],
   "window": {

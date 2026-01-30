@@ -43,6 +43,18 @@
       </view>
       <view class="card-arrow">›</view>
     </view>
+
+    <!-- 家具避雷指南卡片 -->
+    <view class="feature-card" bindtap="goToFurnitureGuide">
+      <view class="card-icon-wrapper card-icon-purple">
+        <image class="card-icon" src="/images/icon-guide.png" mode="aspectFit"></image>
+      </view>
+      <view class="card-content">
+        <text class="card-title">家具避雷指南</text>
+        <text class="card-desc">优劣材质全分析，科学选购不踩坑</text>
+      </view>
+      <view class="card-arrow">›</view>
+    </view>
   </view>
 
   <!-- 使用说明区域 -->
