@@ -10,7 +10,7 @@
     <view class="logo-area">
       <image class="logo-icon" src="/images/logo-chair.png" mode="aspectFit"></image>
     </view>
-    <text class="welcome-title">智能坐姿分析助手</text>
+    <text class="welcome-title">家具安全健康小助手</text>
     <text class="welcome-subtitle">让健康从正确坐姿开始 🪑</text>
   </view>
 
@@ -72,7 +72,7 @@
       <text class="link-divider">|</text>
       <text class="link-text" bindtap="showDisclaimer">免责声明</text>
     </view>
-    <text class="copyright-text">© 2026 智能坐姿助手</text>
+    <text class="copyright-text">© 2026 家具安全健康小助手</text>
   </view>
 
   <!-- 底部装饰元素 -->

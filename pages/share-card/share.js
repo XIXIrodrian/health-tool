@@ -58,7 +58,7 @@ Page({
    */
   onShareTimeline() {
     return {
-      title: '智能坐姿助手 - 我的健康报告'
+      title: '家具安全健康小助手 - 我的健康报告'
     };
   }
 });

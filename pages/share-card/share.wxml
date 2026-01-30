@@ -10,7 +10,7 @@
     <view class="share-card">
       <view class="card-header">
         <image class="card-logo" src="/images/logo-chair.png" mode="aspectFit"></image>
-        <text class="card-app-name">智能坐姿助手</text>
+        <text class="card-app-name">家具安全健康小助手</text>
       </view>
 
       <view class="card-content">
