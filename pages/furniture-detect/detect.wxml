@@ -24,4 +24,26 @@
     <text class="result-title">识别结果</text>
     <!-- 结果内容将在后续实现 -->
   </view>
+
+  <!-- 扫描动画遮罩 -->
+  <view class="scanning-overlay" wx:if="{{scanning}}">
+    <view class="scanning-content">
+      <view class="scan-box">
+        <view class="scan-line"></view>
+        <view class="corner corner-tl"></view>
+        <view class="corner corner-tr"></view>
+        <view class="corner corner-bl"></view>
+        <view class="corner corner-br"></view>
+      </view>
+      <view class="scanning-text">
+        <text class="scan-title">AI识别中</text>
+        <view class="loading-dots">
+          <text class="dot">●</text>
+          <text class="dot">●</text>
+          <text class="dot">●</text>
+        </view>
+      </view>
+      <text class="scan-tip">正在分析家具材质与安全性</text>
+    </view>
+  </view>
 </view>
