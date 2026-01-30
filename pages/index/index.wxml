@@ -27,7 +27,7 @@
       </view>
       <view class="card-content">
         <text class="card-title">家具识别</text>
-        <text class="card-desc">AI智能识别家具材质，进行安全风险评估</text>
+        <text class="card-desc">AI智能识别家具材质，安全风险评估</text>
       </view>
       <view class="card-arrow">›</view>
     </view>
