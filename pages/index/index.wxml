@@ -11,7 +11,8 @@
       <image class="logo-icon" src="/images/logo-chair.png" mode="aspectFit"></image>
     </view>
     <text class="welcome-title">家具安全健康小助手</text>
-    <text class="welcome-subtitle">坐姿不对，椅子报废？这里有家具界的「照妖镜」✨</text>
+    <text class="welcome-subtitle-line1">坐姿不对，椅子报废？</text>
+    <text class="welcome-subtitle-line2">这里有家具界的「照妖镜」✨</text>
     <text class="welcome-tag">家具避雷指南</text>
   </view>
 

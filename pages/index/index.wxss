@@ -64,7 +64,15 @@
   text-align: center;
 }
 
-.welcome-subtitle {
+.welcome-subtitle-line1 {
+  font-size: 28rpx;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 4rpx;
+}
+
+.welcome-subtitle-line2 {
   font-size: 28rpx;
   color: var(--text-secondary);
   text-align: center;
