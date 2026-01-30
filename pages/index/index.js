@@ -82,7 +82,7 @@ Page({
    */
   onShareAppMessage() {
     return {
-      title: '智能坐姿分析助手 - 让健康从正确坐姿开始',
+      title: '家具安全健康小助手 - 让健康从正确坐姿开始',
       path: '/pages/index/index',
       imageUrl: '/images/share-poster.png'
     };
