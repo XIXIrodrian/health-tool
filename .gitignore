@@ -1,0 +1,17 @@
+# WeChat Mini Program
+node_modules/
+.DS_Store
+Thumbs.db
+
+# WeChat DevTools
+.vscode/
+.idea/
+*.log
+
+# Private config
+project.private.config.json
+
+# Temporary files
+*.tmp
+*.bak
+*~

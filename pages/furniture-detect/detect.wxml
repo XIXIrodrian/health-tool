@@ -1,0 +1,27 @@
+<!--pages/furniture-detect/detect.wxml-->
+<view class="container">
+  <view class="page-header">
+    <text class="page-title">家具识别</text>
+    <text class="page-desc">拍摄桌椅照片，AI智能分析</text>
+  </view>
+
+  <!-- 拍照区域 -->
+  <view class="camera-section">
+    <view class="camera-placeholder">
+      <text class="placeholder-icon">📷</text>
+      <text class="placeholder-text">点击拍摄或选择照片</text>
+    </view>
+  </view>
+
+  <!-- 功能按钮 -->
+  <view class="action-buttons">
+    <button class="btn btn-primary" bindtap="takePhoto">拍照识别</button>
+    <button class="btn btn-secondary" bindtap="chooseImage">从相册选择</button>
+  </view>
+
+  <!-- 识别结果区域（初始隐藏） -->
+  <view class="result-section" wx:if="{{hasResult}}">
+    <text class="result-title">识别结果</text>
+    <!-- 结果内容将在后续实现 -->
+  </view>
+</view>
