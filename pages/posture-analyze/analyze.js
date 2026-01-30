@@ -2,7 +2,8 @@
 Page({
   data: {
     hasResult: false,
-    imagePath: ''
+    imagePath: '',
+    scanning: false
   },
 
   onLoad(options) {
@@ -65,20 +66,22 @@ Page({
    * 分析坐姿（待实现AI接口）
    */
   analyzePosture(imagePath) {
-    wx.showLoading({
-      title: '分析中...'
+    // 显示扫描动画
+    this.setData({
+      scanning: true
     });
 
     // TODO: 调用AI分析接口
     setTimeout(() => {
-      wx.hideLoading();
+      // 隐藏扫描动画
       this.setData({
+        scanning: false,
         hasResult: true
       });
       wx.showToast({
         title: '分析完成',
         icon: 'success'
       });
-    }, 2000);
+    }, 3000);
   }
 });
