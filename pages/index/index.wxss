@@ -69,6 +69,19 @@
   color: var(--text-secondary);
   text-align: center;
   line-height: 1.6;
+  margin-bottom: 12rpx;
+}
+
+.welcome-tag {
+  font-size: 24rpx;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 8rpx 24rpx;
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(93, 173, 226, 0.1) 100%);
+  border-radius: 20rpx;
+  border: 1rpx solid rgba(52, 152, 219, 0.3);
+  display: inline-block;
+  margin-top: 8rpx;
 }
 
 /* 功能区域 */

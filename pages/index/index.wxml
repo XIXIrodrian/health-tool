@@ -10,8 +10,9 @@
     <view class="logo-area">
       <image class="logo-icon" src="/images/logo-chair.png" mode="aspectFit"></image>
     </view>
-    <text class="welcome-title">家具安全健康小助手</text>
-    <text class="welcome-subtitle">让健康从正确坐姿开始 🪑</text>
+    <text class="welcome-title">坐姿不对，椅子报废？</text>
+    <text class="welcome-subtitle">这里有家具界的「照妖镜」✨</text>
+    <text class="welcome-tag">家具避雷指南</text>
   </view>
 
   <!-- 功能卡片区域 -->
